@@ -9,16 +9,18 @@ export function GalleryItem({ item }: Props) {
   return (
     <Link
       href={`/gallery/${item.slug}`}
-      className="gallery-item block overflow-hidden rounded-lg shadow-lg"
+      className="group relative block overflow-hidden rounded-lg shadow-lg"
     >
       <img
         src={item.thumbnail}
         alt={`${item.title} thumbnail`}
-        className="gallery-thumbnail"
+        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
       />
-      <div className="gallery-item-overlay">
-        <div className="gallery-item-title">{item.title}</div>
-        <div className="gallery-item-date">{item.date}</div>
+      <div
+        className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900/90 to-gray-900/0 p-4 text-gray-100 opacity-0 translate-y-full transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+      >
+        <div className="font-bold">{item.title}</div>
+        <div className="text-sm text-gray-400">{item.date}</div>
       </div>
     </Link>
   );

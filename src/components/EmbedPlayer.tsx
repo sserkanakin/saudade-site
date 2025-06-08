@@ -4,9 +4,19 @@ interface Props {
 }
 
 export function EmbedPlayer({ url, type = "video" }: Props) {
+  const containerClasses =
+    type === "video"
+      ? "relative overflow-hidden rounded-lg pt-[56.25%]"
+      : "relative overflow-hidden rounded-lg h-[166px]";
+
   return (
-    <div className={`embed-player ${type}`}> 
-      <iframe src={url} allow="autoplay" allowFullScreen />
+    <div className={containerClasses}>
+      <iframe
+        src={url}
+        allow="autoplay"
+        allowFullScreen
+        className="absolute inset-0 h-full w-full rounded-lg"
+      />
     </div>
   );
 }

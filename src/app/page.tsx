@@ -9,8 +9,10 @@ export default function Home() {
     <>
       <Hero />
       {nextEvent && (
-        <section className="content-section upcoming-event">
-          <h2 className="section-title fade-slide fade-delay-7">Next Event</h2>
+        <section className="max-w-5xl mx-auto my-16 px-4">
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-amber-500 inline-block fade-slide fade-delay-7">
+            Next Event
+          </h2>
           <div className="fade-slide fade-delay-8">
             <EventCard {...nextEvent} />
           </div>

@@ -7,7 +7,7 @@ interface Props {
 
 export function GalleryGrid({ items }: Props) {
   return (
-    <div className="gallery-grid">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {items.map((item) => (
         <GalleryItem key={item.slug} item={item} />
       ))}
