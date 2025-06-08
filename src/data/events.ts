@@ -12,11 +12,11 @@ export interface Event {
   // — Upcoming + Past Events exactly as in events.html :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}
   export const events: Event[] = [
     {
-      title: "Summer Saudade Session",
-      date: "Friday, May 29th, 2025",
-      venue: "TBA, Enschede",
+      title: "Midnight Mirage",
+      date: "Saturday, June 14th, 2025",
+      venue: "5ifty7even, Enschede",
       description: "Welcoming summer with Saudade. More details coming soon!",
-      cta: { href: "#", label: "Tickets Coming Soon", disabled: true },
+      cta: { href: "#https://saudade-events.weticket.io/midnight-mirage/shop", label: "Tickets", disabled: false },
       past: false,
     },
     {
