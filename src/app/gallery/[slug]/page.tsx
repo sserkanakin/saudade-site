@@ -2,6 +2,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { galleryOverview, galleryDetails } from "@/data/gallery";
+import { EmbedPlayer } from "@/components/EmbedPlayer";
 
 interface Props {
   params: { slug: string };
@@ -23,12 +24,12 @@ export default function GalleryPage({ params: { slug } }: Props) {
         {detail.venue ? ` | ${detail.venue}` : ""}
       </p>
 
-      <div className="set-recording">
-        <h3>Listen Back</h3>
-        <div className="embed-placeholder">
-          SoundCloud/Mixcloud Embed Goes Here
+      {detail.embedUrl && (
+        <div className="set-recording">
+          <h3>Listen Back</h3>
+          <EmbedPlayer url={detail.embedUrl} height={300} />
         </div>
-      </div>
+      )}
 
       <div className="photo-grid">
         <h3>Photos</h3>
