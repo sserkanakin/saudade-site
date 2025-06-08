@@ -1,11 +1,7 @@
 // src/app/gallery/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-  GalleryOverviewItem,
-  galleryOverview,
-  galleryDetails,
-} from "@/data/gallery";
+import { galleryOverview, galleryDetails } from "@/data/gallery";
 
 interface Props {
   params: { slug: string };
