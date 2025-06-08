@@ -310,6 +310,11 @@ css/style.css
     color: #888;
     border-radius: 3px;
   }
+  .embed-player iframe {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+  }
   .photo-grid {
     margin-bottom: 40px;
   }
