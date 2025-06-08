@@ -29,6 +29,7 @@ export default function GalleryPage({ params: { slug } }: Props) {
           <h3>Listen Back</h3>
           <EmbedPlayer url={detail.embedUrl} />
         </div>
+        </div>
       )}
 
       <div className="photo-grid">
