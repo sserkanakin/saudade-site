@@ -1,19 +1,12 @@
 interface Props {
-  url: string
-  height?: number
+  url: string;
+  type?: "video" | "audio";
 }
 
-export function EmbedPlayer({ url, height = 166 }: Props) {
+export function EmbedPlayer({ url, type = "video" }: Props) {
   return (
-    <div className="embed-player">
-      <iframe
-        src={url}
-        width="100%"
-        height={height}
-        allow="autoplay"
-        frameBorder="0"
-        allowFullScreen
-      />
+    <div className={`embed-player ${type}`}> 
+      <iframe src={url} allow="autoplay" allowFullScreen />
     </div>
-  )
+  );
 }

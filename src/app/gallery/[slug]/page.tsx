@@ -27,7 +27,8 @@ export default function GalleryPage({ params: { slug } }: Props) {
       {detail.embedUrl && (
         <div className="set-recording">
           <h3>Listen Back</h3>
-          <EmbedPlayer url={detail.embedUrl} height={300} />
+          <EmbedPlayer url={detail.embedUrl} />
+        </div>
         </div>
       )}
 

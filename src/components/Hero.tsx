@@ -48,7 +48,7 @@ export function Hero() {
           min-h-[1.5em]
         `}
       >
-        Where the Vibe Unites
+        Feel the Rhythm, Share the Vibe
       </p>
 
       {/* CTA in system UI */}
@@ -69,6 +69,9 @@ export function Hero() {
       >
         View Upcoming Events
       </Link>
+
+      {/* Animated scroll indicator */}
+      <div className="scroll-indicator fade-slide fade-delay-7">↓</div>
     </section>
   );
 }
