@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
+import "@/styles/legacy.css";
 
 const josefin = Josefin_Sans({
   weight: ["400", "700"],
@@ -42,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en" className={`${josefin.variable} antialiased`}>
       <body className="bg-gray-900 text-gray-100 antialiased">
         <Header />
         <main className="pt-16">{children}</main>
