@@ -1,0 +1,19 @@
+/* Dark by default */
+:root {
+  --background: #121212;
+  --foreground: #e0e0e0;
+}
+
+/* Light only if the user explicitly chooses it */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  @apply font-sans;
+  background-color: #121212;
+  color: #e0e0e0;
+}

@@ -1,26 +1,53 @@
-@import "tailwindcss";
+/* 1. Tailwind’s Preflight resets (including html, headings, etc.) */
+@tailwind base;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* 2. Your precise legacy reset & body styles */
+@layer base {
+  /* 🎯 Exact universal reset from your css/style.css */
+  *, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    /* system-UI stack exactly as in your legacy CSS */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* === Fade-slide animation (from css/style.css) === */
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Utility classes */
+  .fade-slide {
+    opacity: 0;
+    animation: fadeSlide 0.8s ease both;
+  }
+  .fade-delay-1 { animation-delay: 0.2s; }
+  .fade-delay-2 { animation-delay: 0.4s; }
+  .fade-delay-3 { animation-delay: 0.6s; }
+  .fade-delay-4 { animation-delay: 0.8s; }
+  .fade-delay-5 { animation-delay: 1.0s; }
+  .fade-delay-6 { animation-delay: 1.2s; }
+  .fade-delay-7 { animation-delay: 1.4s; }
+  .fade-delay-8 { animation-delay: 1.6s; }
+  .fade-delay-9 { animation-delay: 1.8s; }
+  .fade-delay-10 { animation-delay: 2.0s; }
 }
+
+
+/* 3. Tailwind components layer (if you have any) */
+@tailwind components;
+
+/* 4. Tailwind utilities layer */
+@tailwind utilities;
