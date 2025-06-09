@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   //     pathname: "/<your-cloud-name>/**"
   //   }]
   // }
+  experimental: {
+    typedRoutes: false,
+  },
 };
 
 export default nextConfig;
