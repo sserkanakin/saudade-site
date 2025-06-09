@@ -5,7 +5,7 @@ import Script from "next/script";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
-import "@/styles/legacy.css";
+import "@/styles/components.css";
 
 const josefin = Josefin_Sans({
   weight: ["400", "700"],

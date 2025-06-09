@@ -28,6 +28,12 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  /* Bounce animation used for the scroll indicator */
+  @keyframes bounce-indicator {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -10px); }
+  }
+
   /* Utility classes */
   .fade-slide {
     opacity: 0;
@@ -43,6 +49,10 @@
   .fade-delay-8 { animation-delay: 1.6s; }
   .fade-delay-9 { animation-delay: 1.8s; }
   .fade-delay-10 { animation-delay: 2.0s; }
+
+  .animate-bounce-indicator {
+    animation: bounce-indicator 1.5s infinite;
+  }
 }
 
 
