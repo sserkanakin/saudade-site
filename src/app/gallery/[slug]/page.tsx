@@ -1,13 +1,14 @@
 // src/app/gallery/[slug]/page.tsx
-// @ts-nocheck
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { galleryOverview, galleryDetails } from "@/data/gallery";
 import { EmbedPlayer } from "@/components/EmbedPlayer";
 
-// @ts-ignore Next.js type inference is sufficient
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+interface Props {
+  params: { slug: string };
+}
+
+export default function GalleryPage({ params: { slug } }: Props) {
   const overview = galleryOverview.find((g) => g.slug === slug);
   const detail = galleryDetails[slug];
 
