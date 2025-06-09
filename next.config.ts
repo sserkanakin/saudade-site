@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   //     pathname: "/<your-cloud-name>/**"
   //   }]
   // }
+  experimental: {},
 };
 
 export default nextConfig;

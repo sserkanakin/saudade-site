@@ -1,0 +1,117 @@
+/* Header & Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#logo {
+  max-height: 40px;
+  display: block;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #b8860b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+nav a:hover::after,
+nav a:focus::after {
+  transform: scaleX(1);
+}
+
+/* Hero Section (commented out from legacy) */
+/* .hero {
+  background: linear-gradient( rgba(18,18,18,0.7), rgba(18,18,18,0.95) ), url('/assets/images/saudade-hero-bg.JPG') center/cover;
+  background-attachment: scroll;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 6.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.cta-button {
+  display: inline-block;
+  background: transparent;
+  color: #b8860b;
+  border: 2px solid #b8860b;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  background: #b8860b;
+  color: #121212;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(184,134,11,0.3);
+} */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: bounce 1.5s infinite;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  border-top: 1px solid #333;
+  background: #1f1f1f;
+  color: #888;
+  font-size: 0.9em;
+  padding: 30px 20px;
+}
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}

@@ -1,13 +1,5 @@
 // src/components/Hero.tsx
 import Link from "next/link";
-import { Josefin_Sans } from "next/font/google";
-
-// Load Josefin Sans (weights 400 & 700)
-const josefin = Josefin_Sans({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-josefin",
-});
 
 export function Hero() {
   return (
@@ -26,27 +18,27 @@ export function Hero() {
     >
       {/* Title in Josefin Sans */}
       <h1
-        className={`
-          ${josefin.className}
+        className="
           fade-slide fade-delay-4
           font-[700] text-[6.5rem] text-white
           mb-[15px] tracking-[3px]
           drop-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]
-        `}
+        "
+        style={{ fontFamily: 'var(--font-josefin)' }}
       >
         SAUDADE
       </h1>
 
       {/* Tagline in Josefin Sans */}
       <p
-        className={`
-          ${josefin.className}
+        className="
           fade-slide fade-delay-5
           font-[400] text-[1.5rem] text-[#d0d0d0]
           mb-[40px] tracking-[1px]
           drop-shadow-[1px_1px_3px_rgba(0,0,0,0.6)]
           min-h-[1.5em]
-        `}
+        "
+        style={{ fontFamily: 'var(--font-josefin)' }}
       >
         Feel the Rhythm, Share the Vibe
       </p>

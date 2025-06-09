@@ -4,11 +4,9 @@ import Link from "next/link";
 import { galleryOverview, galleryDetails } from "@/data/gallery";
 import { EmbedPlayer } from "@/components/EmbedPlayer";
 
-interface Props {
-  params: { slug: string };
-}
-
-export default function GalleryPage({ params: { slug } }: Props) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function GalleryPage(props: any) {
+  const { slug } = props.params;
   const overview = galleryOverview.find((g) => g.slug === slug);
   const detail = galleryDetails[slug];
 
