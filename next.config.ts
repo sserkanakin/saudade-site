@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  typedRoutes: false,
   // If you end up using next/image with remote URLs, add:
   // images: {
   //   remotePatterns: [{

@@ -1,8 +1,15 @@
 /* 1. Tailwind’s Preflight resets (including html, headings, etc.) */
 @tailwind base;
 
+/* Import Google font at runtime so build doesn't fail */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
 /* 2. Your precise legacy reset & body styles */
 @layer base {
+  :root {
+    /* Expose Josefin Sans as a CSS variable for utility classes */
+    --font-josefin: 'Josefin Sans', sans-serif;
+  }
   /* 🎯 Exact universal reset from your css/style.css */
   *, ::before, ::after {
     margin: 0;
